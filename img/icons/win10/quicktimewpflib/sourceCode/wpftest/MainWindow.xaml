@@ -1,0 +1,9 @@
+﻿<Window x:Class="wpftest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:QuickTimeWpfLib="clr-namespace:QuickTimeWpfLib;assembly=QuickTimeWpfLib" Loaded="Window_Loaded"
+		Title="MainWindow" Height="350" Width="525">
+    <Grid>
+		<QuickTimeWpfLib:QuickTimeControl Name="qt" StatusUpdate="qt_StatusUpdate" Error="qt_Error"/>
+	</Grid>
+</Window>

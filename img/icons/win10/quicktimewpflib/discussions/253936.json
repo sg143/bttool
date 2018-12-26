@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "597380",
+    "ThreadId": "253936",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>thanks for providing this great example on how to use quicktime in WPF!</p>\r\n<p>I was wondering who to implement a function that shows the current timecode from the movie, while the movie plays?</p>\r\n<p>So i found an example function in a book called &quot;QuickTime for .NET and COM Developers&quot;, but i can't figure out, why this doesn't work in the wpf lib. Maybe i am doing something wrong.</p>\r\n<div style=\"color:black; background-color:#efefef\">\r\n<pre>Private Sub QTControl0_QTEvent(ByVal EventClass As Long, \r\n            ByVal EventID As Long, ByVal Phase As Long, \r\n            ByVal EventObject As Object, Cancel As Boolean)\r\n  Dim t As Long\r\n  \r\nIf EventID = qtEventTimeWillChange Then\r\n    t = EventObject.GetParam(QTEventObjectParametersEnum.\r\n            qtEventParamMovieTime)\r\n    Me.tbTime = GetTimeCode(QTControl0.Movie, t)\r\n  End If\r\nEnd Sub\r\n</pre>\r\n</div>\r\n<p>So i took a look at the function QTEvent in AxQTControlEventMulticaster, but it doesn't seem to be called at all. Is there a trick?</p>\r\n<div style=\"color:black; background-color:#efefef\">\r\n<pre>public virtual void QTEvent(int eventClass, int eventID, int phase, QTEventObject eventObject, ref bool cancel)\r\n{\r\n  _IQTControlEvents_QTEventEvent e = new _IQTControlEvents_QTEventEvent(eventClass, eventID, phase, eventObject, cancel);\r\n  this.parent.RaiseOnQTEvent(this.parent, e);\r\n  cancel = e.cancel;<br>}\r\n</pre>\r\n</div>\r\n<p>Is there an Event I can subscribe to in order to repeatingly update my timecode?</p>\r\n<p>Would be great, if you could help me out. I am usually working with Linux as a target system, I don't have a clue about all the windows active x stuff.</p>\r\n<p>Thanks</p>\r\n<p>Tobi</p>\r\n",
+    "PostedDate": "2011-04-14T11:49:57.76-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "695499",
+    "ThreadId": "253936",
+    "Html": "<p>Hi Tobi,</p>\n<p>I'm using the QTEvent and have canged the constructor in the QuickTimeControl. I have added an eventhandler and that's it. See code below:</p>\n<p><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\">\n<pre>Constructor:</pre>\n<pre>qtControl.QTEvent += QTControlEvent;\r\nqtControl.QuickTime.EventListeners.Add(QTOLibrary.QTEventClassesEnum.qtEventClassStateChange, QTEventIDsEnum.qtEventMovieDidEnd, null, null);</pre>\n<pre><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\">Eventhandler:</span></span></pre>\n</span></span></p>\n<pre><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\"><pre>private void QTControlEvent(object sender, AxQTOControlLib._IQTControlEvents_QTEventEvent e)\r\n{\r\n  MediaEvent(this, new MediaEventArgs(e.eventID));\r\n}</pre>\n</span></span></span></span></pre>",
+    "PostedDate": "2011-11-08T12:30:24.507-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

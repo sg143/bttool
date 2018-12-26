@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickTimeWpfLib", "QuickTimeWpfLib\QuickTimeWpfLib.csproj", "{3545B029-84DE-4090-A371-C2364943A691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComControlTest", "ComControlTest\ComControlTest.csproj", "{01480212-060E-4D1C-9707-37E28C467FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpftest", "wpftest\wpftest.csproj", "{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2AB257BC-B356-42B0-975A-AF68A68BAD67}"
+	ProjectSection(SolutionItems) = preProject
+		quicktime_com_docs.pdf = quicktime_com_docs.pdf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://alexei.is-a-geek.com:8143/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ComControlTest\\ComControlTest.csproj
+		SccProjectName1 = ComControlTest
+		SccLocalPath1 = ComControlTest
+		SccProjectUniqueName2 = QuickTimeWpfLib\\QuickTimeWpfLib.csproj
+		SccProjectName2 = QuickTimeWpfLib
+		SccLocalPath2 = QuickTimeWpfLib
+		SccProjectUniqueName3 = wpftest\\wpftest.csproj
+		SccProjectName3 = wpftest
+		SccLocalPath3 = wpftest
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3545B029-84DE-4090-A371-C2364943A691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3545B029-84DE-4090-A371-C2364943A691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3545B029-84DE-4090-A371-C2364943A691}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3545B029-84DE-4090-A371-C2364943A691}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3545B029-84DE-4090-A371-C2364943A691}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3545B029-84DE-4090-A371-C2364943A691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3545B029-84DE-4090-A371-C2364943A691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3545B029-84DE-4090-A371-C2364943A691}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3545B029-84DE-4090-A371-C2364943A691}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3545B029-84DE-4090-A371-C2364943A691}.Release|x86.ActiveCfg = Release|Any CPU
+		{01480212-060E-4D1C-9707-37E28C467FCA}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{01480212-060E-4D1C-9707-37E28C467FCA}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{01480212-060E-4D1C-9707-37E28C467FCA}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{01480212-060E-4D1C-9707-37E28C467FCA}.Debug|x86.ActiveCfg = Debug|x86
+		{01480212-060E-4D1C-9707-37E28C467FCA}.Debug|x86.Build.0 = Debug|x86
+		{01480212-060E-4D1C-9707-37E28C467FCA}.Release|Any CPU.ActiveCfg = Release|x86
+		{01480212-060E-4D1C-9707-37E28C467FCA}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{01480212-060E-4D1C-9707-37E28C467FCA}.Release|Mixed Platforms.Build.0 = Release|x86
+		{01480212-060E-4D1C-9707-37E28C467FCA}.Release|x86.ActiveCfg = Release|x86
+		{01480212-060E-4D1C-9707-37E28C467FCA}.Release|x86.Build.0 = Release|x86
+		{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}.Debug|x86.ActiveCfg = Debug|x86
+		{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}.Debug|x86.Build.0 = Debug|x86
+		{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}.Release|Any CPU.ActiveCfg = Release|x86
+		{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}.Release|Mixed Platforms.Build.0 = Release|x86
+		{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}.Release|x86.ActiveCfg = Release|x86
+		{1AEFC601-2AFE-48EC-A15F-0DAE04A548B4}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

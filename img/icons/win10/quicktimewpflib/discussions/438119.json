@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1021572",
+    "ThreadId": "438119",
+    "Html": "hey,guys:\r<br />\n   I have two questions when i play a mp4 file use the sdk.\r<br />\n   First question,how can i hide the quick time player User interface?\r<br />\n   Second question,why it doesn't work i set the property of AutoPlay false in QuickTimeMovie class?\r<br />\n  thx.<br />\n",
+    "PostedDate": "2013-03-26T23:32:18.46-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1021594",
+    "ThreadId": "438119",
+    "Html": "lol,\r<br />\ni found the answer of first question,there is a property named MovieControllerVisible in AxQTControl.cs.<br />\n",
+    "PostedDate": "2013-03-27T00:18:14.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]
