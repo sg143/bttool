@@ -22,6 +22,7 @@ Partial Class frm_main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_main))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btn_loginout = New System.Windows.Forms.Button()
@@ -56,7 +57,7 @@ Partial Class frm_main
         Me.btn_upload = New System.Windows.Forms.Button()
         Me.chk_blank = New System.Windows.Forms.CheckBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GboxUList = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.cbo_qapr = New System.Windows.Forms.ComboBox()
@@ -104,12 +105,16 @@ Partial Class frm_main
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.chk_rush = New System.Windows.Forms.CheckBox()
         Me.main_gridview = New System.Windows.Forms.DataGridView()
+        Me.IdleTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.BWTimer = New System.ComponentModel.BackgroundWorker()
+        Me.WaitTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.lbl_gridview_status = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.GboxUList.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -140,7 +145,7 @@ Partial Class frm_main
         Me.Panel2.Location = New System.Drawing.Point(0, 43)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(161, 663)
+        Me.Panel2.Size = New System.Drawing.Size(161, 604)
         Me.Panel2.TabIndex = 1
         '
         'btn_loginout
@@ -426,10 +431,10 @@ Partial Class frm_main
         Me.Panel1.Controls.Add(Me.btn_cancel)
         Me.Panel1.Controls.Add(Me.btn_submit)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(161, 647)
+        Me.Panel1.Location = New System.Drawing.Point(161, 588)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1143, 59)
+        Me.Panel1.Size = New System.Drawing.Size(1056, 59)
         Me.Panel1.TabIndex = 2
         '
         'btn_break_log
@@ -565,7 +570,7 @@ Partial Class frm_main
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1304, 43)
+        Me.Panel3.Size = New System.Drawing.Size(1217, 43)
         Me.Panel3.TabIndex = 3
         '
         'btn_file
@@ -693,7 +698,7 @@ Partial Class frm_main
         '
         Me.Panel4.AutoScroll = True
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(189, Byte), Integer), CType(CType(198, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.GroupBox1)
+        Me.Panel4.Controls.Add(Me.GboxUList)
         Me.Panel4.Controls.Add(Me.GroupBox4)
         Me.Panel4.Controls.Add(Me.GroupBox3)
         Me.Panel4.Controls.Add(Me.GroupBox2)
@@ -702,22 +707,22 @@ Partial Class frm_main
         Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Padding = New System.Windows.Forms.Padding(3)
-        Me.Panel4.Size = New System.Drawing.Size(1143, 170)
+        Me.Panel4.Size = New System.Drawing.Size(1056, 170)
         Me.Panel4.TabIndex = 5
         '
-        'GroupBox1
+        'GboxUList
         '
-        Me.GroupBox1.Controls.Add(Me.TableLayoutPanel4)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(760, 3)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6, 3, 6, 6)
-        Me.GroupBox1.Size = New System.Drawing.Size(279, 164)
-        Me.GroupBox1.TabIndex = 50
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Assign User:"
+        Me.GboxUList.Controls.Add(Me.TableLayoutPanel4)
+        Me.GboxUList.Dock = System.Windows.Forms.DockStyle.Left
+        Me.GboxUList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GboxUList.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GboxUList.Location = New System.Drawing.Point(760, 3)
+        Me.GboxUList.Name = "GboxUList"
+        Me.GboxUList.Padding = New System.Windows.Forms.Padding(6, 3, 6, 6)
+        Me.GboxUList.Size = New System.Drawing.Size(279, 164)
+        Me.GboxUList.TabIndex = 50
+        Me.GboxUList.TabStop = False
+        Me.GboxUList.Text = "Assign User:"
         '
         'TableLayoutPanel4
         '
@@ -767,6 +772,7 @@ Partial Class frm_main
         '
         Me.cbo_qapr.BackColor = System.Drawing.Color.White
         Me.cbo_qapr.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cbo_qapr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_qapr.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_qapr.FormattingEnabled = True
         Me.cbo_qapr.Location = New System.Drawing.Point(182, 31)
@@ -788,6 +794,7 @@ Partial Class frm_main
         '
         Me.cbo_qabt.BackColor = System.Drawing.Color.White
         Me.cbo_qabt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cbo_qabt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_qabt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_qabt.FormattingEnabled = True
         Me.cbo_qabt.Location = New System.Drawing.Point(182, 3)
@@ -799,6 +806,7 @@ Partial Class frm_main
         '
         Me.cbo_bt.BackColor = System.Drawing.Color.White
         Me.cbo_bt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cbo_bt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_bt.FormattingEnabled = True
         Me.cbo_bt.Location = New System.Drawing.Point(47, 3)
@@ -820,6 +828,7 @@ Partial Class frm_main
         '
         Me.cbo_pr.BackColor = System.Drawing.Color.White
         Me.cbo_pr.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cbo_pr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_pr.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_pr.FormattingEnabled = True
         Me.cbo_pr.Location = New System.Drawing.Point(47, 31)
@@ -841,6 +850,7 @@ Partial Class frm_main
         '
         Me.cbo_qacc.BackColor = System.Drawing.Color.White
         Me.cbo_qacc.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cbo_qacc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_qacc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_qacc.FormattingEnabled = True
         Me.cbo_qacc.Location = New System.Drawing.Point(182, 87)
@@ -852,6 +862,7 @@ Partial Class frm_main
         '
         Me.cbo_qast.BackColor = System.Drawing.Color.White
         Me.cbo_qast.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cbo_qast.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_qast.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_qast.FormattingEnabled = True
         Me.cbo_qast.Location = New System.Drawing.Point(182, 59)
@@ -863,6 +874,7 @@ Partial Class frm_main
         '
         Me.cbo_cc.BackColor = System.Drawing.Color.White
         Me.cbo_cc.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cbo_cc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_cc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_cc.FormattingEnabled = True
         Me.cbo_cc.Location = New System.Drawing.Point(47, 87)
@@ -874,6 +886,7 @@ Partial Class frm_main
         '
         Me.cbo_st.BackColor = System.Drawing.Color.White
         Me.cbo_st.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cbo_st.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_st.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_st.FormattingEnabled = True
         Me.cbo_st.Location = New System.Drawing.Point(47, 59)
@@ -969,7 +982,7 @@ Partial Class frm_main
         Me.btn_Doc.Location = New System.Drawing.Point(190, 30)
         Me.btn_Doc.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_Doc.Name = "btn_Doc"
-        Me.btn_Doc.Size = New System.Drawing.Size(32, 20)
+        Me.btn_Doc.Size = New System.Drawing.Size(32, 21)
         Me.btn_Doc.TabIndex = 28
         Me.btn_Doc.UseVisualStyleBackColor = False
         '
@@ -1004,7 +1017,7 @@ Partial Class frm_main
         Me.btn_Audio.Location = New System.Drawing.Point(190, 4)
         Me.btn_Audio.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_Audio.Name = "btn_Audio"
-        Me.btn_Audio.Size = New System.Drawing.Size(32, 20)
+        Me.btn_Audio.Size = New System.Drawing.Size(32, 21)
         Me.btn_Audio.TabIndex = 27
         Me.btn_Audio.UseVisualStyleBackColor = False
         '
@@ -1067,6 +1080,7 @@ Partial Class frm_main
         '
         'servPicker
         '
+        Me.servPicker.CustomFormat = "MM/dd/yyyy"
         Me.servPicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.servPicker.Location = New System.Drawing.Point(84, 31)
         Me.servPicker.Name = "servPicker"
@@ -1280,24 +1294,56 @@ Partial Class frm_main
         '
         'main_gridview
         '
+        Me.main_gridview.AllowUserToAddRows = False
+        Me.main_gridview.AllowUserToDeleteRows = False
+        Me.main_gridview.AllowUserToResizeRows = False
         Me.main_gridview.BackgroundColor = System.Drawing.Color.White
         Me.main_gridview.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.main_gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.main_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.main_gridview.Dock = System.Windows.Forms.DockStyle.Fill
         Me.main_gridview.Location = New System.Drawing.Point(161, 213)
         Me.main_gridview.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.main_gridview.Name = "main_gridview"
-        Me.main_gridview.Size = New System.Drawing.Size(1143, 493)
+        Me.main_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.main_gridview.Size = New System.Drawing.Size(1056, 375)
         Me.main_gridview.TabIndex = 6
+        '
+        'IdleTimer
+        '
+        Me.IdleTimer.Interval = 1000
+        '
+        'BWTimer
+        '
+        '
+        'WaitTimer
+        '
+        Me.WaitTimer.Interval = 1000
+        '
+        'lbl_gridview_status
+        '
+        Me.lbl_gridview_status.AutoSize = True
+        Me.lbl_gridview_status.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.lbl_gridview_status.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.lbl_gridview_status.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_gridview_status.ForeColor = System.Drawing.Color.White
+        Me.lbl_gridview_status.Location = New System.Drawing.Point(161, 559)
+        Me.lbl_gridview_status.Name = "lbl_gridview_status"
+        Me.lbl_gridview_status.Padding = New System.Windows.Forms.Padding(5)
+        Me.lbl_gridview_status.Size = New System.Drawing.Size(128, 29)
+        Me.lbl_gridview_status.TabIndex = 7
+        Me.lbl_gridview_status.Text = "Fetching data..."
+        Me.lbl_gridview_status.Visible = False
         '
         'frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1304, 706)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(1217, 647)
+        Me.Controls.Add(Me.lbl_gridview_status)
         Me.Controls.Add(Me.main_gridview)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
@@ -1307,14 +1353,14 @@ Partial Class frm_main
         Me.MinimumSize = New System.Drawing.Size(1000, 564)
         Me.Name = "frm_main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Main"
+        Me.Text = "BT TOOL"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel2.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
+        Me.GboxUList.ResumeLayout(False)
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel4.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
@@ -1328,6 +1374,7 @@ Partial Class frm_main
         Me.TableLayoutPanel2.PerformLayout()
         CType(Me.main_gridview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Panel2 As Panel
@@ -1400,7 +1447,7 @@ Partial Class frm_main
     Friend WithEvents Label20 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label21 As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GboxUList As GroupBox
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
@@ -1411,4 +1458,8 @@ Partial Class frm_main
     Friend WithEvents btn_break As Button
     Friend WithEvents servPicker As DateTimePicker
     Friend WithEvents btn_break_log As Button
+    Friend WithEvents IdleTimer As Timer
+    Friend WithEvents BWTimer As System.ComponentModel.BackgroundWorker
+    Friend WithEvents WaitTimer As Timer
+    Friend WithEvents lbl_gridview_status As Label
 End Class

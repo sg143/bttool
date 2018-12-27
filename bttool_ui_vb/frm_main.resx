@@ -475,7 +475,7 @@
   <data name="btn_Doc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
-        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAADyAAAA8gGUtS2JAAAAGXRFWHRTb2Z0d2FyZQB3d3cu
+        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAADuAAAA7gEG1rI0AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
         aW5rc2NhcGUub3Jnm+48GgAAAHZJREFUOE9jGHjwHxN8A2IFqDRhANGDATZDpQkDqAaSAVQ73IBfQOwO
         xC7EYqh2uAGngLgcwiQJ3IEZ0A/EhyFMksAEmAEZQPwHwiQJuMMMKILSpIDPQMwOMuAvEB8BiZAItiAH
         Ijkgk1IDZCkx4ApY8yAADAwAl2d4kLsnihgAAAAASUVORK5CYII=
@@ -484,12 +484,21 @@
   <data name="btn_Audio.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
-        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAADyAAAA8gGUtS2JAAAAGXRFWHRTb2Z0d2FyZQB3d3cu
+        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAADuAAAA7gEG1rI0AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
         aW5rc2NhcGUub3Jnm+48GgAAAHZJREFUOE9jGHjwHxN8A2IFqDRhANGDATZDpQkDqAaSAVQ73IBfQOwO
         xC7EYqh2uAGngLgcwiQJ3IEZ0A/EhyFMksAEmAEZQPwHwiQJuMMMKILSpIDPQMwOMuAvEB8BiZAItiAH
         Ijkgk1IDZCkx4ApY8yAADAwAl2d4kLsnihgAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="IdleTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1, 2</value>
+  </metadata>
+  <metadata name="BWTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>173, 3</value>
+  </metadata>
+  <metadata name="WaitTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>88, 2</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAA8AEBAQAAAAAAAoAQAA9gAAABAQAAABABgAaAMAAB4CAAAQEAAAAQAgAGgEAACGBQAAICAQAAAA

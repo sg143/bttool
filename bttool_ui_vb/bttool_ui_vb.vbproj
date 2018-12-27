@@ -80,6 +80,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomClass.vb" />
     <Compile Include="CustomVariables.vb" />
     <Compile Include="frm_login.Designer.vb">
       <DependentUpon>frm_login.vb</DependentUpon>

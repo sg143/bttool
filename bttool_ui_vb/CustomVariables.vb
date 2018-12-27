@@ -4,6 +4,10 @@
     ''' </summary>
     Public DebugDirectory As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
     ''' <summary>
+    ''' Default debug text file that contains all the errors and exceptions.
+    ''' </summary>
+    Public DebugTextFile As String = "BTTOOL_ERROR_LOG.txt"
+    ''' <summary>
     ''' The ID of the current user logged in.
     ''' </summary>
     Public CurrentUserID As Integer
@@ -55,4 +59,52 @@
     ''' The server to use throughout the application
     ''' </summary>
     Public BaseServer As String
+    ''' <summary>
+    ''' The ID of the file the user selected from the main gridview.
+    ''' </summary>
+    Public FileID As Integer
+    ''' <summary>
+    ''' Date receive of the selected file.
+    ''' </summary>
+    Public RecDate As String
+    ''' <summary>
+    ''' Client of the selected file.
+    ''' </summary>
+    Public Client As String
+    ''' <summary>
+    ''' Sound file of the selected file.
+    ''' </summary>
+    Public SoundFile As String
+    ''' <summary>
+    ''' Service Sound of the selected file.
+    ''' </summary>
+    Public ServSound As String
+    ''' <summary>
+    ''' Document name of the selected file.
+    ''' </summary>
+    Public DocName As String
+    ''' <summary>
+    ''' Service document of the selected file.
+    ''' </summary>
+    Public ServDoc As String
+    ''' <summary>
+    ''' The branch name of the selected file.
+    ''' </summary>
+    Public Branch As String
+    ''' <summary>
+    ''' BT user assigned for the selected file.
+    ''' </summary>
+    Public BTID As Integer
+    ''' <summary>
+    ''' PR user assigned for the selected file.
+    ''' </summary>
+    Public PRID As Integer
+    ''' <summary>
+    ''' PR QA user assigned for the selected file.
+    ''' </summary>
+    Public QAPRID As Integer
+    ''' <summary>
+    ''' The return directory of the returned file.
+    ''' </summary>
+    Public RetDirectory As String
 End Module

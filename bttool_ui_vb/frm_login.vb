@@ -2,7 +2,7 @@
 
 Public Class frm_login
 
-    Private db As New markDBOClass.SQLClass
+    Private db As New markform.SQLClass
     Private cf As New markform.CustomClass
     '*************************************************************
     'Events
@@ -99,13 +99,13 @@ Public Class frm_login
                         CustomVariables.CurrentUserIsBTWork = Boolean.Parse(BTWork)
                         CustomVariables.LockTime = Integer.Parse(LockTime)
                         CustomVariables.FileLocalDirectory = Path.Combine(CustomVariables.MyDocumentsDirectory, "BT Tool", UDept)
-
+                        txt_username.Text = "" : txt_pass.Text = ""
                         Me.DialogResult = DialogResult.OK
                         Me.Close()
                     End If
                 End If
             Catch ex As Exception
-                cf.WriteToFile("{0}==>" & ex.ToString, CustomVariables.DebugDirectory & "\\BTTOOL_ERROR_LOG.txt")
+                cf.WriteToFile("{0}==>" & ex.ToString, CustomVariables.DebugDirectory & "\\" & DebugTextFile)
             End Try
         End If
     End Sub
